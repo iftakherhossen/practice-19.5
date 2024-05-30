@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div>
+    <h1 class="mb-4 fw-bold">Create New Album</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form|crispy}}
+        <button class="btn btn btn-dark">Create Album</button>
+    <form>
+</div>
+{% endblock %}
